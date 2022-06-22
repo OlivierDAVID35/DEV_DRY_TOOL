@@ -59,7 +59,7 @@ node app
   - "option" : node-dev ou nodemon  
 
 ---
-## ETAPE 2 > Ajout de pages d'authentification</u> (signup/login/signout/profil) :
+## ETAPE 2 > Ajout de pages d'authentification</u> (signup/login/signout/profil)
 
 1. Choix de l'ajout de pages supplémentaires
 2. TODO > controller (authController) à modifier suivant la BDD utilisée  
@@ -109,7 +109,7 @@ node app
   - bcrypt
   - csurf
 ---
-## ETAPE 3 > Création d'une database et importation des données (.sql) :
+## ETAPE 3 > Création d'une database et importation des données (.sql)
 
 1. Choix création d'un User et/ou une Database
 2. Choix importation de fichier(s) data dans le dossier projet :
@@ -136,7 +136,7 @@ node app
 - **Package NPM installé :**
   - pg
 ---
-## ETAPE 4 > Génération de modèles sequelize :
+## ETAPE 4 > Génération de modèles sequelize
 
 1. Choix d'installation de sequelize et génération auto des modèles suivant les tables de la database  
 
