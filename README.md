@@ -17,7 +17,7 @@ node app
 - Il suffit juste de vous laisser guider à chaque étape en répondant aux questions dans le terminal ;)  
   - *Vous pourrez vous arrêter à chaque étape...*  
   - *... mais pour le moment, les étapes de création ne sont pas indépendantes*
-- Pour finir, votre projet sera automatiquement ouvert dans Visual Studio Code
+- Pour finir, votre projet sera automatiquement ouvert dans une nouvelle session de Visual Studio Code
 ---
 <h2 style="color: royalBlue"><u>ETAPE 1 > Création d'un serveur Express</u></h2>  
 
