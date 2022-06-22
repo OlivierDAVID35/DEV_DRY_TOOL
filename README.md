@@ -111,9 +111,9 @@ node app
 ---
 ## ETAPE 3 > Création d'une database et importation des données (.sql)
 
-1. Choix création d'un User et/ou une Database
-2. Choix importation de fichier(s) data dans le dossier projet :
+1. Choix importation de fichier(s) data dans le dossier projet :
    - *Possibilité d'importer plusieurs fichiers (<u>dans l'ordre</u> : table(s) puis data)*
+2. Choix création d'un User et/ou une Database
 3. Importation des tables / data dans la database  
 
 **- Arborescence des dossiers & fichiers créés / modifiés du projet :**
