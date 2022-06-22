@@ -30,13 +30,13 @@ authModule.createAuthChoice(createAuthAnswer ,projectDirectory, port);
     
 //! 4 - Database
 titleModule.database();
+    //? Importer un fichier data
+    const importDbFileAnswer = promptModule.importDbFileAnswer();
+    databaseModule.importDbFile(importDbFileAnswer, projectDirectory);
     //? Créer user et/ou database
     const createUserAndDbAnswer = promptModule.createUserAndDbAnswer();
     console.log("\x1b[35m Attention: PostgreSQL doit être installé pour poursuivre ! https://www.postgresql.org/download/ \x1b[0m");
     databaseModule.createUserAndDb(createUserAndDbAnswer, projectDirectory);
-    //? Importer le fichier
-    const importDbFileAnswer = promptModule.importDbFileAnswer();
-    databaseModule.importDbFile(importDbFileAnswer, projectDirectory);
     //? Créer & importer database sql dans le serveur
     const importDbAnswer = promptModule.importDbAnswer();
     databaseModule.createDb(importDbAnswer, projectDirectory, port, dbFile, userName, dbName);
