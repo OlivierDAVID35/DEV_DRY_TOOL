@@ -101,7 +101,6 @@ node app
 
 - <u>Package NPM installés :</u>
   - express-session
-  - fs
   - email-validator
   - bcrypt
   - csurf

@@ -30,8 +30,8 @@ const authModule = {
         });
         fs.removeSync(`${projectDirectory}/app/router.js`);
         console.log("\x1b[32m Dossiers/fichiers mis à jour > authentification prête \x1b[0m");
-        execSync("npm i express-session fs email-validator bcrypt csurf", {stdio: "inherit", shell: true, cwd: `${projectDirectory}`});
-        console.log("\x1b[32m Packages npm installés : express-session, fs, email-validator, bcrypt & csurf \x1b[0m");
+        execSync("npm i express-session email-validator bcrypt csurf", {stdio: "inherit", shell: true, cwd: `${projectDirectory}`});
+        console.log("\x1b[32m Packages npm installés : express-session, email-validator, bcrypt & csurf \x1b[0m");
     }
 }
 
