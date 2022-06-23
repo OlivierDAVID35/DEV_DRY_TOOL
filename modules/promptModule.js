@@ -10,7 +10,7 @@ const promptModule = {
     },
     //? Recupere le chemin du projet
     promptProjectPath() {
-        return prompt(`\x1b[94m> Indique le chemin dans lequel ton dossier "${projectName}" sera créé : \x1b[0m`);
+        return prompt(`\x1b[94m> Indique le chemin où ton dossier "${projectName}" sera créé : \x1b[0m`);
     },
     //? Construire le chemin du projet
     getProjectDirectory() {
