@@ -6,11 +6,11 @@ const promptModule = {
 //! NEW PROJECT    
     //? Recupere le nom du projet
     promptProjectName() {
-        return prompt("\x1b[94m> Quel est le nom de ton projet ? (sans espaces): \x1b[0m");
+        return projectName = prompt("\x1b[94m> Quel est le nom de ton projet ? (sans espaces): \x1b[0m");
     },
     //? Recupere le chemin du projet
     promptProjectPath() {
-        return prompt("\x1b[94m> Dans quel dossier veux-tu l'installer ? : \x1b[0m");
+        return prompt(`\x1b[94m> Indique le chemin dans lequel ton dossier "${projectName}" sera créé : \x1b[0m`);
     },
     //? Construire le chemin du projet
     getProjectDirectory() {
