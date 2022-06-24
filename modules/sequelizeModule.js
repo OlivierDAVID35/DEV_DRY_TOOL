@@ -15,7 +15,7 @@ const sequelizeModule = {
                 if(err) return err;
             });
             fs.outputFileSync(`${projectDirectory}/config.js`, 
-            `const path = require('path');\nconst output = path.join(__dirname, 'app/models');\nconst options = { directory: output, caseFile: 'o', caseModel: 'o', caseProp: 'o', lang: 'es6', useDefine: false, singularize: true, spaces: true, indentation: 2 };\nconst postgres = {\ndbname: '${dbName}',\nuser: '${userName}'\n,pass: '${password}',\noptions: { dialect: 'postgres' },\nautoOptions: { dialect: 'postgres', ...options }\n};\nmodule.exports = postgres;`, (err) => {
+            `const path = require('path');\nconst output = path.join(__dirname, 'app/models');\nconst options = { directory: output, caseFile: 'o', caseModel: 'p', caseProp: 'o', lang: 'es6', useDefine: false, singularize: true, spaces: true, indentation: 2 };\nconst postgres = {\ndbname: '${dbName}',\nuser: '${userName}'\n,pass: '${password}',\noptions: { dialect: 'postgres' },\nautoOptions: { dialect: 'postgres', ...options }\n};\nmodule.exports = postgres;`, (err) => {
                 if(err) return err;
             });
             execSync("node export.js", {stdio: "inherit", shell: true, cwd: `${projectDirectory}`});    
