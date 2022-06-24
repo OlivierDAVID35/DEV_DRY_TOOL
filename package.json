@@ -14,12 +14,12 @@
   },
   "name": "dev_dry_app",
   "version": "1.0.0",
-  "main": "test_global.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app"
   },
   "keywords": [],
-  "author": "",
+  "author": "Olivier DAVID",
   "license": "ISC",
-  "description": "![This is an image](https://nsm09.casimages.com/img/2022/06/18//22061806594424883917926273.png) <h1 style=\"color: green\">Générateur de projet Monolithique   (architecture MVC)</h2>"
+  "description": "Générateur de serveur express avec prise en charge de la data"
 }
