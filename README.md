@@ -10,7 +10,7 @@ Agrandir un peu le terminal ;)
 npm i
 ```
 ```
-node app
+npm start
 ```
 <h2 style="color: darkCyan">Déroulement</h2>
 
