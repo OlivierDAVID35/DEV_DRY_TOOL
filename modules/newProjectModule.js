@@ -5,8 +5,6 @@ const fs = require('fs-extra');
 const newProjectModule = {
     createNewProject(projectDirectory) {
         //? Création du dossier du projet
-        console.log(projectDirectory);
-        process.exit();
         if(!fs.existsSync(projectDirectory)) {
             fs.mkdir(projectDirectory, { recursive: true }, (err) => {
                 if(err) return err;

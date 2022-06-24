@@ -54,7 +54,7 @@ const authController = {
     login: function(req, res) {
 //*----------
     // login: async function(req, res) {
-        //TODO >  vérifier si login (email) et mot de passe sont similaires à ceux resneignés dans la bdd
+        //TODO >  vérifier si login (email) et mot de passe sont similaires à ceux renseignés dans la bdd
         // const user = await User.findOne({
         //     where: {
         //         email: req.body.email
