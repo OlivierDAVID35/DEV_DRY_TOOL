@@ -35,6 +35,7 @@ const databaseModule = {
             console.log("\x1b[31m Fichier(s) data non copié(s) \x1b[0m");
             titleModule.end();
             processModule.launchProject(projectDirectory);
+            process.exit();
         } else {
             console.log("\x1b[31m Saisie incorrecte \x1b[0m");
             importDbFileAnswer = promptModule.importDbFileAnswer();

@@ -1,24 +1,42 @@
 const prompt = require("prompt-sync")({ sigint: true });
+const fs = require("fs-extra");
 
 //! Questionnaire
 
 const promptModule = {
 //! NEW PROJECT    
-    //? Recupere le nom du projet
-    promptProjectName() {
-        return projectName = prompt("\x1b[94m> Quel est le nom de ton projet ? (sans espaces): \x1b[0m");
-    },
-    //? Recupere le chemin du projet
-    promptProjectPath() {
-        return prompt(`\x1b[94m> Indique le chemin où ton dossier "${projectName}" sera créé : \x1b[0m`);
-    },
+    // //? Recupere le nom du projet
+    // promptProjectName() {
+    //     return projectName = prompt("\x1b[94m> Quel est le nom de ton projet ? (sans espaces): \x1b[0m");
+    //     if (projectName === "" || projectName.trim().length === 0) {
+    //         console.log("\x1b[31m Merci de donner un nom a ton projet \x1b[0m");
+    //         promptModule.promptProjectName();
+    //     }
+    // },
+    // //? Recupere le chemin du projet
+    // promptProjectPath() {
+    //     return prompt(`\x1b[94m> Indique le chemin où ton dossier "${projectName}" sera créé : \x1b[0m`);
+    // },
     //? Construire le chemin du projet
     getProjectDirectory() {
         console.log("\n \x1b[94m\x1b[4m\x1b[1mDossier projet :\x1b[0m \n");
-        let projectName = this.promptProjectName()
-        let str = this.promptProjectPath()
+        let projectName = prompt("\x1b[94m> Quel est le nom de ton projet ? (sans espaces): \x1b[0m");
+        while (projectName === "" || projectName.trim().length === 0) {
+            console.log("\x1b[31m Merci de donner un nom a ton projet \x1b[0m");
+            projectName = prompt("\x1b[94m> Quel est le nom de ton projet ? (sans espaces): \x1b[0m");
+        };
+        let str = prompt(`\x1b[94m> Indique le chemin où ton dossier "${projectName}" sera créé : \x1b[0m`);
+        while (str === "" || str.trim().length === 0) {
+            console.log("\x1b[31m Le chemin doit être renseigné \x1b[0m");
+            str = prompt(`\x1b[94m> Indique le chemin où ton dossier "${projectName}" sera créé : \x1b[0m`);
+        };
+        
         let projectPath = str.endsWith('/') ? str.slice(0, -1) : str;
         let projectDirectory = `${projectPath}/${projectName}`
+        if(fs.existsSync(projectDirectory)) {
+            console.log(`\x1b[31m Le dossier de destination "${projectName}" existe déjà...Merci de renseigner un autre nom et/ou chemin \x1b[0m`);
+            promptModule.getProjectDirectory();
+        };
         return projectDirectory
     },
 //! SERVER 
